@@ -21,6 +21,9 @@ window.BRIEF = {
     { rank: 4, category: "工具", title: "Granite Switch 4.1.1：适配器像软件补丁一样更新", summary: "IBM 更新语音识别与决策适配器，同时保持基础模型兼容。", impact: "模块化模型维护更接近传统软件发布。", source: "Hugging Face", url: "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1" },
     { rank: 5, category: "端侧", title: "Apple 平台迎来本地语音与决策模型", summary: "Swift 应用可在 Core ML、MLX 与 llama.cpp 间切换开放模型并保持本地执行。", impact: "开发者获得更便宜、更私密的云端替代方案。", source: "Hugging Face", url: "https://huggingface.co/blog/anydecisionmodel" },
     { rank: 6, category: "政策", title: "Project ProtoStar 让公共科研数据更适合 AI", summary: "开放科学伙伴启动气候风险挑战，推动公共资助成果机器可读和可复用。", impact: "更好的公共数据将提升可复现性与科研普惠。", source: "Hugging Face", url: "https://huggingface.co/blog/announcing-project-protostar" },
-    { rank: 7, category: "芯片", title: "Nemotron 3.5 Transcribe 覆盖 Blackwell 到边缘设备", summary: "30B/4B 激活的开放语音模型统一处理转写、翻译、说话人识别与音频问答。", impact: "一套语音栈可跨边缘与数据中心部署。", source: "Hugging Face", url: "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary" }
+    { rank: 7, category: "芯片", title: "Nemotron 3.5 Transcribe 覆盖 Blackwell 到边缘设备", summary: "30B/4B 激活的开放语音模型统一处理转写、翻译、说话人识别与音频问答。", impact: "一套语音栈可跨边缘与数据中心部署。", source: "Hugging Face", url: "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary" },
+    { rank: 8, category: "模型", title: "Claude Opus 5.5 降低高端智能体成本", summary: "Anthropic 将新旗舰定位于复杂编码与知识工作，并称典型工作负载成本下降 40%。", impact: "前沿智能体进入更可持续的生产成本区间。", source: "Anthropic", url: "https://www.anthropic.com/claude-opus-5-5" },
+    { rank: 9, category: "端侧", title: "LFM3 用约 2B 参数覆盖多模态端侧任务", summary: "六款模型横跨文本、视觉、音频、全模态与决策，强调单卡微调和本地运行。", impact: "受限硬件也能承载更完整的多模态体验。", source: "Hugging Face", url: "https://huggingface.co/blog/LiquidAI/lfm3" },
+    { rank: 10, category: "产业", title: "Anthropic 启动公开上市流程", summary: "公司提交注册声明，发行时间与条款仍取决于监管审查和市场条件。", impact: "公开市场将更直接审视前沿模型的经济性、治理与资本需求。", source: "Anthropic", url: "https://www.anthropic.com/news/s1-sec" }
   ]
 };
