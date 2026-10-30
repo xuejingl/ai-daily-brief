@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta property="og:title" content="AI Daily Brief">
+  <meta property="og:description" content="每天 10 条，图表化阅读 AI 动态。">
+  <title>AI Daily Brief</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="eyebrow">AI DAILY BRIEF</div>
+      <h1>今天的 AI，<span>一眼看懂</span></h1>
+      <p id="vibe" class="vibe"></p>
+      <div class="meta"><span id="date"></span><span>10 条精选</span><span>约 4 分钟</span></div>
+    </header>
+
+    <section class="metrics" id="metrics"></section>
+
+    <section class="panel chart-panel">
+      <div class="section-head"><div><span class="kicker">SIGNAL MAP</span><h2>今日热度</h2></div><span class="hint">按入选数量</span></div>
+      <div id="chart" class="chart"></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="kicker">TOP STORIES</span><h2>值得关注</h2></div><span class="hint">点卡片看原文</span></div>
+      <div id="stories" class="stories"></div>
+    </section>
+
+    <footer>每日更新 · 精简中文摘要 · 原始来源直达</footer>
+  </main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
