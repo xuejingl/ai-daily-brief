@@ -1,29 +1,29 @@
 window.BRIEF = {
-  date: "2026-10-29",
-  vibe: "开放权重与科学基础设施继续提速，稀疏模型、本地工具和实用研究成为今天的主线。",
+  date: "2026-11-01",
+  vibe: "周末没有大厂重磅发布，前沿信号集中在可验证智能体、自动科研与本地多模态系统。",
   metrics: [
-    { label: "精选动态", value: "10", detail: "过去 24–48 小时" },
-    { label: "开源/开放", value: "6", detail: "今日最强信号" },
-    { label: "本地部署", value: "4", detail: "端侧与单卡" },
-    { label: "研究论文", value: "3", detail: "值得细读" }
+    { label: "精选动态", value: "10", detail: "最新 24–48 小时窗口" },
+    { label: "研究论文", value: "9", detail: "最新 cs.AI 批次" },
+    { label: "智能体", value: "7", detail: "今日核心主题" },
+    { label: "可验证性", value: "6", detail: "安全与科学" }
   ],
   categories: [
-    { label: "模型", value: 3 },
-    { label: "研究", value: 3 },
-    { label: "工具", value: 2 },
-    { label: "产业", value: 1 },
-    { label: "政策", value: 1 }
+    { label: "研究", value: 4 },
+    { label: "智能体", value: 2 },
+    { label: "科学", value: 2 },
+    { label: "安全", value: 1 },
+    { label: "工具", value: 1 }
   ],
   stories: [
-    { rank: 1, category: "模型", title: "Mistral Large 4：万亿参数开放权重 MoE", summary: "约 1T 总参数、49B 激活参数与 1M 上下文，把前沿级能力继续推向自托管。", impact: "企业部署开放模型的上限再次被抬高。", source: "Hugging Face", url: "https://huggingface.co/blog/mistral-large4", hot: true },
-    { rank: 2, category: "研究", title: "Timestral：小体量时间序列模型冲上榜首", summary: "四个 5M–209M 参数模型覆盖概率预测，作者报告其在多个基准取得领先。", impact: "生产级预测不再必须依赖巨型模型。", source: "arXiv", url: "https://arxiv.org/abs/2610.37585", hot: true },
-    { rank: 3, category: "科学", title: "AI for Science 扩展至研究机构", summary: "多家基金会与科研机构获得机构级 AI 支持，覆盖生物、气候、天文和数学。", impact: "AI 辅助科研开始从个人工具走向机构基础设施。", source: "Anthropic", url: "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions" },
-    { rank: 4, category: "工具", title: "Granite Switch 4.1.1：适配器像软件补丁一样更新", summary: "IBM 更新语音识别与决策适配器，同时保持基础模型兼容。", impact: "模块化模型维护更接近传统软件发布。", source: "Hugging Face", url: "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1" },
-    { rank: 5, category: "端侧", title: "Apple 平台迎来本地语音与决策模型", summary: "Swift 应用可在 Core ML、MLX 与 llama.cpp 间切换开放模型并保持本地执行。", impact: "开发者获得更便宜、更私密的云端替代方案。", source: "Hugging Face", url: "https://huggingface.co/blog/anydecisionmodel" },
-    { rank: 6, category: "政策", title: "Project ProtoStar 让公共科研数据更适合 AI", summary: "开放科学伙伴启动气候风险挑战，推动公共资助成果机器可读和可复用。", impact: "更好的公共数据将提升可复现性与科研普惠。", source: "Hugging Face", url: "https://huggingface.co/blog/announcing-project-protostar" },
-    { rank: 7, category: "芯片", title: "Nemotron 3.5 Transcribe 覆盖 Blackwell 到边缘设备", summary: "30B/4B 激活的开放语音模型统一处理转写、翻译、说话人识别与音频问答。", impact: "一套语音栈可跨边缘与数据中心部署。", source: "Hugging Face", url: "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary" },
-    { rank: 8, category: "模型", title: "Claude Opus 5.5 降低高端智能体成本", summary: "Anthropic 将新旗舰定位于复杂编码与知识工作，并称典型工作负载成本下降 40%。", impact: "前沿智能体进入更可持续的生产成本区间。", source: "Anthropic", url: "https://www.anthropic.com/claude-opus-5-5" },
-    { rank: 9, category: "端侧", title: "LFM3 用约 2B 参数覆盖多模态端侧任务", summary: "六款模型横跨文本、视觉、音频、全模态与决策，强调单卡微调和本地运行。", impact: "受限硬件也能承载更完整的多模态体验。", source: "Hugging Face", url: "https://huggingface.co/blog/LiquidAI/lfm3" },
-    { rank: 10, category: "产业", title: "Anthropic 启动公开上市流程", summary: "公司提交注册声明，发行时间与条款仍取决于监管审查和市场条件。", impact: "公开市场将更直接审视前沿模型的经济性、治理与资本需求。", source: "Anthropic", url: "https://www.anthropic.com/news/s1-sec" }
+    { rank: 1, category: "科学", title: "AI 智能体闭环完成量子实验", summary: "多智能体从提出问题、推导理论到设计实验，并在发现信号漂移后主动修订测量方案。", impact: "自动科研开始展示自我质疑与纠错，而不只是生成结论。", source: "arXiv", url: "https://arxiv.org/abs/2610.40589", hot: true },
+    { rank: 2, category: "安全", title: "在智能体泄密前一刻发出预警", summary: "线性探针在 5% 良性误报阈值下识别出 82% 的即将泄密调用，明显超过零样本监控。", impact: "智能体安全防线可从事后过滤前移到生成前干预。", source: "arXiv", url: "https://arxiv.org/abs/2610.40588", hot: true },
+    { rank: 3, category: "研究", title: "Ramanujan 挑战把 AI 数学推向研究级", summary: "参赛系统给出不同于官方解法的正确证明，并解决一项已公开猜想。", impact: "AI 数学评测正从竞赛题转向开放研究问题。", source: "arXiv", url: "https://arxiv.org/abs/2610.40551", hot: true },
+    { rank: 4, category: "智能体", title: "代数世界模型从探索走向形式化证明", summary: "AWM 从陌生环境归纳可执行规则，再用 Lean 证明目标可达或不可能。", impact: "智能体获得可检查的世界模型，比纯轨迹试错更可靠。", source: "arXiv", url: "https://arxiv.org/abs/2610.40503" },
+    { rank: 5, category: "科学", title: "FARMS 为自动计算科学建立可验证知识层", summary: "系统把计算数学来源转为带上下文、算法含义和定量保证的 AI 可读知识。", impact: "自动科研可在低成本下复用带证明约束的数值方法。", source: "arXiv", url: "https://arxiv.org/abs/2610.40560" },
+    { rank: 6, category: "医疗", title: "105 项技能协同临床基因分析", summary: "ClinGeX 在 223 个时间隔离病例上达到 71.7% 任务一致率，强基线为 45.7%。", impact: "可执行专业技能有望缓解临床基因解读的人力瓶颈。", source: "arXiv", url: "https://arxiv.org/abs/2610.40556" },
+    { rank: 7, category: "研究", title: "工具智能体评测不再只看最终成功", summary: "Prefix Executability 逐步检查工具调用前缀，揭示终局分数掩盖的无效轨迹。", impact: "开发者可更早定位智能体在哪一步破坏状态或依赖。", source: "arXiv", url: "https://arxiv.org/abs/2610.40444" },
+    { rank: 8, category: "工具", title: "Nemotron 驱动单机实时多模态角色", summary: "语音识别、小模型、TTS、视觉与动画在 Blackwell 工作站上组成完整互动角色。", impact: "开放模型已能把低延迟多模态体验落到本地硬件。", source: "Hugging Face", url: "https://huggingface.co/blog/nvidia/nemotron-halloween" },
+    { rank: 9, category: "研究", title: "状态化检索用局部遍历替代反复全局搜索", summary: "价值索引记忆让智能体沿持久地址空间移动，并在小型环境中更快学到高回报。", impact: "长上下文记忆可能从无状态搜索转向可持续导航。", source: "arXiv", url: "https://arxiv.org/abs/2610.40545" },
+    { rank: 10, category: "智能体", title: "多智能体把个性化学习组织成持续流程", summary: "Agentic University 连接目标、活动与评估，用户平均测评分数提升高于对照组。", impact: "教育智能体的价值从一次问答扩展到长期学习编排。", source: "arXiv", url: "https://arxiv.org/abs/2610.40492" }
   ]
 };
