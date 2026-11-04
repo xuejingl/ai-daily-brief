@@ -1,29 +1,31 @@
 window.BRIEF = {
-  date: "2026-11-03",
-  vibe: "开源工具把模型开发与内容生产做得更可测、更可控，研究前沿则同时推进智能体、具身系统与动态架构。",
+  date: "2026-11-04",
+  vibe: "更强的智能体模型正在降本提速，工具链、安全评测、机器人数据与推理基础设施也同步走向可验证、可部署。",
   metrics: [
     { label: "精选动态", value: "10", detail: "最新 24–48 小时窗口" },
-    { label: "研究论文", value: "8", detail: "arXiv 最新批次" },
-    { label: "推理成本", value: "-39%", detail: "Strategist 对比强基线" },
-    { label: "攻击成功率", value: "22.9%", detail: "MCP 跨框架实测" }
+    { label: "模型成本", value: "-40%", detail: "Opus 5.5 对比 Opus 5" },
+    { label: "数据中心营收", value: "+97%", detail: "AMD 同比增长" },
+    { label: "推理吞吐", value: "6.1×", detail: "LoopVQ 峰值提升" }
   ],
   categories: [
-    { label: "研究", value: 4 },
-    { label: "工具", value: 3 },
-    { label: "产业", value: 1 },
-    { label: "安全", value: 1 },
+    { label: "研究", value: 2 },
+    { label: "工具", value: 2 },
+    { label: "安全", value: 2 },
+    { label: "模型", value: 1 },
+    { label: "芯片", value: 1 },
+    { label: "基础设施", value: 1 },
     { label: "机器人", value: 1 }
   ],
   stories: [
-    { rank: 1, category: "工具", title: "20B 开源模型学会按企业风格做幻灯片", summary: "IBM 的 Palette 用约 1,000 份合成演示稿、双角色流程与渲染修复器微调 20B 模型，在 PresentBench 两个领域排名第一。", impact: "企业可在本地保留机密内容，并把品牌规范直接固化进演示稿生成流程。", source: "IBM Research / Hugging Face", url: "https://huggingface.co/blog/ibm-research/palette-deck-building", hot: true },
-    { rank: 2, category: "工具", title: "Transformers 引入模型集成契约", summary: "Hugging Face 提议用缩小模型、真实使用路径和冻结基线，在 CPU 上为模型架构建立可复现的快速回归测试。", impact: "大型模型库有望在合并代码前发现静默精度退化，而无需为每次提交运行完整 GPU 测试。", source: "Hugging Face", url: "https://huggingface.co/blog/transformers-mic", hot: true },
-    { rank: 3, category: "安全", title: "MCP 工具投毒在跨框架实测中得手 22.9%", summary: "研究者对 12 个框架、18 个模型和 45 类攻击运行 9,720 组测试，其中 12.1% 的成功样本可验证泄露了秘密。", impact: "智能体平台需要在工具元数据、调用和网络出口层建立系统防护，单靠提示拒绝并不够。", source: "arXiv", url: "https://arxiv.org/abs/2611.03555", hot: true },
-    { rank: 4, category: "工具", title: "WebHarbor 复刻 153 个真实网站训练 GUI 智能体", summary: "WebHarbor 提供 153 个可执行、容器化网站与 3,518 个任务，并让 4B 级智能体通过强化学习迁移到未见任务。", impact: "网页智能体可在稳定、可审计的环境中训练和评测，减少对易变在线网站的依赖。", source: "arXiv", url: "https://arxiv.org/abs/2611.03634" },
-    { rank: 5, category: "研究", title: "Strategist 让智能体自动进化推理策略", summary: "元智能体把推理流程写成可复用蓝图，在 30 个基准中胜过最强基线 24 次，并以低 39% 的成本达到相近平均准确率。", impact: "智能体优化开始从更换基础模型转向自动搜索、验证和复用推理程序。", source: "arXiv", url: "https://arxiv.org/abs/2611.03618" },
-    { rank: 6, category: "机器人", title: "Pixel-UMI 从人类演示学习全身移动操作", summary: "系统结合场景几何重定向、误差感知遮罩与在线纠正，在五类高难任务上取得 87.0% 平均进度。", impact: "机器人数据采集可更多依赖人类自然演示，同时降低视角错位和机体差异带来的训练损失。", source: "arXiv", url: "https://arxiv.org/abs/2611.03647" },
-    { rank: 7, category: "研究", title: "Sonar-MoE 边反传边释放专家梯度", summary: "新方法在反向传播时逐层更新专家张量，使峰值显存下降 19% 至 22%，单步训练还快 17% 至 23%。", impact: "MoE 微调可在更小显存预算下运行，并减少梯度裁剪带来的额外耗时。", source: "arXiv", url: "https://arxiv.org/abs/2611.03577" },
-    { rank: 8, category: "研究", title: "Transformer 开始按任务动态重排层", summary: "Library of Layers 在推理时自行选择层顺序，并在迷宫、数独、多语言和安全任务中形成不同计算路径。", impact: "模型架构可能从固定流水线转向可组合计算图，在效率与可控推理之间提供新权衡。", source: "arXiv", url: "https://arxiv.org/abs/2611.03526" },
-    { rank: 9, category: "研究", title: "量化 VLM 在 Jetson 上离线诊断作物", summary: "PlantVLM-Edge 的 4 位版本保留 98.6% 全精度质量，2B 模型权重仅需 2.01 GiB，首 token 约 0.12 秒。", impact: "视觉语言诊断可在无云连接的边缘设备运行，为农业现场提供低延迟、本地化支持。", source: "arXiv", url: "https://arxiv.org/abs/2611.03557" },
-    { rank: 10, category: "产业", title: "企业交付智能体仍卡在需求发现", summary: "对 15 个模型的 Text-to-SQL 实验显示，最强模型能发现逾 80% 隐藏需求，但交付阶段仅 25% 运行通过全部验收。", impact: "企业部署需要把人工需求复核、执行监控和算力约束写进智能体工作流，而非只看基准分数。", source: "arXiv", url: "https://arxiv.org/abs/2611.03551" }
+    { rank: 1, category: "模型", title: "Claude Opus 5.5 降本 40%", summary: "Anthropic 发布 Claude 5.5 系列首款模型 Opus 5.5，主打智能体编程、电脑操作与知识工作，典型负载成本较 Opus 5 低 40%。", impact: "前沿模型竞争从单纯追分转向长任务可靠性、速度与单位任务成本的综合优化。", source: "Anthropic", url: "https://www.anthropic.com/claude-opus-5-5", hot: true },
+    { rank: 2, category: "芯片", title: "AMD 数据中心营收同比近翻倍", summary: "AMD 第三季度营收达 134 亿美元，其中数据中心业务创下 85 亿美元纪录、同比增长 97%，由 EPYC 与 MI450 系列需求推动。", impact: "AI 算力需求正加速扩大 AMD 在 GPU、CPU 与整机基础设施市场的规模。", source: "AMD", url: "https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results", hot: true },
+    { rank: 3, category: "工具", title: "同一模型换框架，任务通过率从 30% 到 81%", summary: "IBM 用同一 GLM-5.3-flash 跑 90 个 AppWorld 任务，CUGA、Hermes 与 Deep Agents 的通过率分别为 81.1%、46.7% 和 30.0%。", impact: "企业智能体的规划、验证、反思与策略执行框架，可能和底座模型本身一样决定成败。", source: "IBM Research / Hugging Face", url: "https://huggingface.co/blog/ibm-research/cuga-harness", hot: true },
+    { rank: 4, category: "安全", title: "CyberArena 让安全智能体实时攻防", summary: "新基准让 12 个前沿智能体在 40 项挑战中完成 466 场三回合攻防赛，并由外部设施验证夺旗与服务健康状态。", impact: "动态对手比静态漏洞题更能检验智能体的修补、攻击与持续运行能力。", source: "2077AI / Hugging Face", url: "https://huggingface.co/blog/2077AIDataFoundation/cyberarena" },
+    { rank: 5, category: "工具", title: "TRL 支持多教师在策略蒸馏", summary: "Hugging Face TRL 的 AsyncDistillationTrainer 已支持 MOPD，可把数学、代码、工具使用等领域的强化学习专家蒸馏回一个通用模型。", impact: "开源团队可复用前沿实验室的多专家合并路线，降低跨领域后训练的工程门槛。", source: "Hugging Face", url: "https://huggingface.co/blog/sergiopaniego/mopd-trl" },
+    { rank: 6, category: "研究", title: "DreamX 把视频扩散模型变成动作编码器", summary: "DreamX 将每帧表示从 1,200 个 token 压到 4 个，并在 LARY-Bench 上实现领先的跨人类、机器人与环境动作迁移。", impact: "视频生成模型可进一步充当通用动作接口，为跨机体策略学习压缩数据与算力成本。", source: "arXiv", url: "https://arxiv.org/abs/2611.05377" },
+    { rank: 7, category: "安全", title: "PEARL 让行为纠偏更耐后续训练", summary: "研究在 Qwen3-4B 与 GPT-OSS-20B 上用中间状态扩展强化学习轨迹，压制窄触发与广触发失准行为，同时保持任务准确率。", impact: "模型安全需要经得住后续微调，而不只是一次性消除当前测试中的有害输出。", source: "arXiv", url: "https://arxiv.org/abs/2611.05358" },
+    { rank: 8, category: "研究", title: "让草稿模型在关键点故意被拒", summary: "对抗式推测推理训练仅 0.06% 至 0.28% 的托管参数，在关键决策点触发目标模型重采样，从而提升长程智能体编程成功率。", impact: "推测解码不再只是加速器，也能成为长任务中分配推理精度的新控制杆。", source: "arXiv", url: "https://arxiv.org/abs/2611.05345" },
+    { rank: 9, category: "基础设施", title: "LoopVQ 将 KV 缓存压到每元素 0.5 比特", summary: "LoopVQ 联合量化循环 Transformer 多轮缓存，在 32K 上下文中近乎减半解码延迟，峰值吞吐最高提升 6.1 倍。", impact: "循环架构的主要显存瓶颈被显著压缩，有利于低成本部署长上下文推理服务。", source: "arXiv", url: "https://arxiv.org/abs/2611.05304" },
+    { rank: 10, category: "机器人", title: "编程智能体接手机器人数据采集", summary: "PyRUA-DataFarm 只用一次校准演示就自动重建仿真任务，合成数据策略在五项真机任务中取得 93/100 次成功。", impact: "机器人新任务的数据成本可从反复遥操作转向一次性场景搭建与低价自动渲染。", source: "arXiv", url: "https://arxiv.org/abs/2611.05320" }
   ]
 };
