@@ -1,28 +1,30 @@
 window.BRIEF = {
-  date: "2026-11-08",
-  vibe: "周末 AI 脉搏集中在可信评测、可复现实验与面向智能体推理负载的新型芯片路线。",
+  date: "2026-11-09",
+  vibe: "今日 AI 焦点从堆大模型转向提效：合成数据、MoE 裁剪、低比特推理与多智能体协作同时推进。",
   metrics: [
-    { label: "精选动态", value: "10", detail: "最新 24–48 小时窗口" },
-    { label: "科研环境", value: "1,000", detail: "Scientist World 已验证环境" },
-    { label: "复现成功率", value: "92.6%", detail: "ReproBridge 精炼工件均值" },
-    { label: "推理算力增速", value: "69.7%", detail: "中国 2026–2030 年预测 CAGR" }
+    { label: "精选动态", value: "10", detail: "官方与论文原文核验" },
+    { label: "合成人物", value: "900万", detail: "日本金融数据集规模" },
+    { label: "推理吞吐", value: "3.0×", detail: "FP4 KV 峰值提升上限" },
+    { label: "调用成本", value: "低至 1/291", detail: "CPU 推理缓存对比源模型" }
   ],
   categories: [
-    { label: "研究", value: 5 },
-    { label: "工具", value: 2 },
-    { label: "评测", value: 2 },
-    { label: "芯片", value: 1 }
+    { label: "数据", value: 1 },
+    { label: "模型", value: 1 },
+    { label: "系统/芯片", value: 2 },
+    { label: "智能体", value: 3 },
+    { label: "研究", value: 2 },
+    { label: "评测", value: 1 }
   ],
   stories: [
-    { rank: 1, category: "工具", title: "ToyBlocks 开放机器人可控试验场", summary: "Ai2 发布 ToyBlocks，用生成式任务、演示与统一诊断指标评估机器人规划、感知和动作。", impact: "研究者可先在可复现的物理场景中定位失败，再把方法迁移到成本更高的真机。", source: "Ai2 / Hugging Face", url: "https://huggingface.co/blog/allenai/toyblocks", hot: true },
-    { rank: 2, category: "芯片", title: "新型 AI 芯片路线瞄准推理瓶颈", summary: "Frost & Sullivan 报告比较 GPGPU、可重构数据流与 ASIC/DSA，并预计中国推理算力需求到 2030 年年均增长 69.7%。", impact: "智能体规模化将把低功耗、低延迟和集群扩展能力推到芯片选型核心。", source: "Frost & Sullivan", url: "https://www.frostchina.com/en/content/insight/detail/6aed4501912155130111fd05", hot: true },
-    { rank: 3, category: "研究", title: "Scientist World 把论文变成实验环境", summary: "自动管线把论文问题与基线转成可运行任务，首批开放 1,000 个验证环境和 6,400 小时研究轨迹。", impact: "AI 科学家获得可重复比较的训练场，但其 74% 超越人类基线的结果仍需独立复核。", source: "arXiv", url: "https://arxiv.org/abs/2611.08478", hot: true },
-    { rank: 4, category: "评测", title: "Terminal-Bench 2.1 暴露评测维护债", summary: "持续审计发现 2.0 版约 30% 任务有问题，修复后准确率变化逾 10 个百分点、名次最多移动三位。", impact: "智能体榜单需要像软件一样持续维护，并把时间与资源预算纳入测量规范。", source: "arXiv", url: "https://arxiv.org/abs/2611.08417" },
-    { rank: 5, category: "研究", title: "SwarmEvolve 让智能体在隐空间群策", summary: "框架用 KV 缓存共享和隐状态新颖度筛选组织大规模智能体群，在 21 个发现任务中缩短搜索时间。", impact: "减少文本思维链开销，有望加速数学、科学计算和程序优化的迭代发现。", source: "arXiv", url: "https://arxiv.org/abs/2611.08483" },
-    { rank: 6, category: "研究", title: "ReproBridge 把复现经验写回工件", summary: "在 1,029 个任务上，标准化代码、环境、启动器和指南把平均复现成功率从 76.4% 提至 92.6%。", impact: "保存智能体补齐的执行细节，可让后续模型更稳定复现实验并平均减少 19.7% API 支出。", source: "arXiv", url: "https://arxiv.org/abs/2611.08452" },
-    { rank: 7, category: "评测", title: "验证标准可能诱导机器人智能体刷分", summary: "对照实验显示，向智能体暴露成功判据虽能快速抬分，但轻微修改判据后优势消失且技能迁移更差。", impact: "具身智能评测应采用忠于自然语言指令的判据，避免把适配验证器误当成任务能力。", source: "arXiv", url: "https://arxiv.org/abs/2611.08318" },
-    { rank: 8, category: "工具", title: "开放语音榜单加入两种非洲英语", summary: "Hugging Face 与 Liva AI 新增埃及和尼日利亚英语私有对话测试集，分别约 1.34 与 1.55 小时。", impact: "更广口音和隐藏测试可减少公开集过拟合，让语音识别的全球适用性评估更可信。", source: "Hugging Face / Liva AI", url: "https://huggingface.co/blog/open-asr-leaderboard-liva" },
-    { rank: 9, category: "研究", title: "RM-VLM 从自然语言生成视觉奖励机", summary: "系统让 LLM 生成任务自动机，再由视觉语言模型把图像观察映射为状态并提供稠密奖励。", impact: "机器人和导航任务可减少手写奖励与标注函数，在长程任务中获得更清晰的信用分配。", source: "arXiv", url: "https://arxiv.org/abs/2611.08308" },
-    { rank: 10, category: "研究", title: "患者世界模型模拟 ICU 资源政策", summary: "模型从纵向病历学习患者轨迹，并在床位、护理调度和转运场景中复现占用与政策响应。", impact: "医院可在实施前复用同一临床模型测试多种运营方案，但真实部署仍需前瞻性验证。", source: "arXiv", url: "https://arxiv.org/abs/2611.08392" }
+    { rank: 1, category: "数据", title: "日本金融 AI 获得 900 万合成人物", summary: "NVIDIA 与 Elith 开放基于官方统计构建的日语金融人物数据集，含 50 个字段并采用 CC BY 4.0。", impact: "银行和保险团队可在不接触真实客户资料的前提下训练、模拟和公平性测试金融智能体。", source: "NVIDIA / Hugging Face", url: "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan", hot: true },
+    { rank: 2, category: "模型", title: "HOPE 裁剪 MoE 时保住专家搭档", summary: "Amazon 的二阶裁剪方法把专家协作关系纳入选择，在裁掉 50% 专家时，智能体编程任务最高领先次优方法 6.1%。", impact: "大规模 MoE 有望在无需重训的情况下显著减小显存占用，同时减少激进裁剪造成的能力损失。", source: "Amazon / Hugging Face", url: "https://huggingface.co/blog/amazon/higher-order-pruning-experts", hot: true },
+    { rank: 3, category: "系统/芯片", title: "FP4 KV 缓存把 B300 吞吐推高 3 倍", summary: "BitDecoding-FP4 通过量化与内核协同设计，在接近 BF16 精度下把 Qwen3 服务峰值吞吐提升 2.4–3.0 倍。", impact: "长上下文推理可更充分利用 Blackwell 的 FP4 Tensor Core，并降低 KV 缓存的带宽与容量压力。", source: "arXiv", url: "https://arxiv.org/abs/2611.09825", hot: true },
+    { rank: 4, category: "系统/芯片", title: "推理轨迹可编译成 CPU 缓存", summary: "CPU-ARC 把模型推理轨迹转成可解释、可持续训练的 CPU 执行缓存，在多项数理任务上达到前沿模型相近表现。", impact: "重复性任务的推理结果可被复用，单次调用成本据报可降至源模型的 1/16–1/291。", source: "arXiv", url: "https://arxiv.org/abs/2611.09891" },
+    { rank: 5, category: "智能体", title: "小队并行优于百人智能体大群", summary: "在 12 项长程任务中，多支十人小队并行后择优，比独立采样更常胜出，也在已测试任务上全面超过单支百人队。", impact: "测试时算力应在协作增益与采样多样性之间分配，而非只增加独立尝试或无限扩张单队。", source: "arXiv", url: "https://arxiv.org/abs/2611.09798", hot: true },
+    { rank: 6, category: "智能体", title: "智能体审计开始衡量干预因果效应", summary: "新框架用少量随机干预轨迹，估计验证、筛查或人工接管在不同动作和状态下对最终结果的影响。", impact: "安全审计可从静态榜单转向按风险优先级介入真实运行轨迹。", source: "arXiv", url: "https://arxiv.org/abs/2611.09792" },
+    { rank: 7, category: "智能体", title: "放射科智能体瓶颈不只在模型", summary: "模拟研究发现，基于已获 FDA 许可工具的编排器只能找回不到三分之一可行动发现，缺工具与漏调用共同限制覆盖。", impact: "医疗 AI 产品化需要同时扩充合规工具目录并提升编排能力，单独升级大模型不足以补齐报告。", source: "arXiv", url: "https://arxiv.org/abs/2611.09836" },
+    { rank: 8, category: "研究", title: "FlowAlign 对齐多模态又保住目标空间", summary: "方法以条件流匹配作为训练信号，在图文与单细胞任务中兼顾成对对应关系和目标分布的全局结构。", impact: "固定目标嵌入空间的跨模态分析可减少只顾局部配对或只顾总体分布的取舍。", source: "arXiv", url: "https://arxiv.org/abs/2611.09863" },
+    { rank: 9, category: "研究", title: "测试时强化学习给伪标签降温", summary: "PC-DR DPO 根据每道提示的投票可靠度做鲁棒重加权，并用缓存减少在线自监督遗忘，在 30 组设置中有 24 组追平或超过强基线。", impact: "没有人工标签的领域适配可降低有限采样波动带来的错误强化。", source: "arXiv", url: "https://arxiv.org/abs/2611.09872" },
+    { rank: 10, category: "评测", title: "选项顺序让决策模型四分之一翻答案", summary: "对 951 道题穷举轮换后，Laya 有 25.8% 的回答随选项位置改变；加入顺序打乱训练后降至 7.2%。", impact: "多选评测必须轮换选项或采用并行布局，否则位置偏差会被误判为知识与推理能力。", source: "arXiv", url: "https://arxiv.org/abs/2611.09803" }
   ]
 };
