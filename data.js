@@ -1,30 +1,30 @@
 window.BRIEF = {
-  date: "2026-11-09",
-  vibe: "今日 AI 焦点从堆大模型转向提效：合成数据、MoE 裁剪、低比特推理与多智能体协作同时推进。",
+  date: "2026-11-10",
+  vibe: "今日 AI 焦点从更强模型转向可控落地：企业采购、安全急停、专业决策与主动智能体同时加速。",
   metrics: [
     { label: "精选动态", value: "10", detail: "官方与论文原文核验" },
-    { label: "合成人物", value: "900万", detail: "日本金融数据集规模" },
-    { label: "推理吞吐", value: "3.0×", detail: "FP4 KV 峰值提升上限" },
-    { label: "调用成本", value: "低至 1/291", detail: "CPU 推理缓存对比源模型" }
+    { label: "急停上限", value: "35秒", detail: "研究负载停止输出" },
+    { label: "任务多样性", value: "+45%", detail: "AI 自由职业项目" },
+    { label: "安全完成率", value: "89.1%", detail: "情境安全迁移测试" }
   ],
   categories: [
-    { label: "数据", value: 1 },
-    { label: "模型", value: 1 },
-    { label: "系统/芯片", value: 2 },
-    { label: "智能体", value: 3 },
-    { label: "研究", value: 2 },
-    { label: "评测", value: 1 }
+    { label: "产品", value: 1 },
+    { label: "安全", value: 2 },
+    { label: "产业", value: 3 },
+    { label: "工具", value: 1 },
+    { label: "智能体", value: 2 },
+    { label: "研究", value: 1 }
   ],
   stories: [
-    { rank: 1, category: "数据", title: "日本金融 AI 获得 900 万合成人物", summary: "NVIDIA 与 Elith 开放基于官方统计构建的日语金融人物数据集，含 50 个字段并采用 CC BY 4.0。", impact: "银行和保险团队可在不接触真实客户资料的前提下训练、模拟和公平性测试金融智能体。", source: "NVIDIA / Hugging Face", url: "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan", hot: true },
-    { rank: 2, category: "模型", title: "HOPE 裁剪 MoE 时保住专家搭档", summary: "Amazon 的二阶裁剪方法把专家协作关系纳入选择，在裁掉 50% 专家时，智能体编程任务最高领先次优方法 6.1%。", impact: "大规模 MoE 有望在无需重训的情况下显著减小显存占用，同时减少激进裁剪造成的能力损失。", source: "Amazon / Hugging Face", url: "https://huggingface.co/blog/amazon/higher-order-pruning-experts", hot: true },
-    { rank: 3, category: "系统/芯片", title: "FP4 KV 缓存把 B300 吞吐推高 3 倍", summary: "BitDecoding-FP4 通过量化与内核协同设计，在接近 BF16 精度下把 Qwen3 服务峰值吞吐提升 2.4–3.0 倍。", impact: "长上下文推理可更充分利用 Blackwell 的 FP4 Tensor Core，并降低 KV 缓存的带宽与容量压力。", source: "arXiv", url: "https://arxiv.org/abs/2611.09825", hot: true },
-    { rank: 4, category: "系统/芯片", title: "推理轨迹可编译成 CPU 缓存", summary: "CPU-ARC 把模型推理轨迹转成可解释、可持续训练的 CPU 执行缓存，在多项数理任务上达到前沿模型相近表现。", impact: "重复性任务的推理结果可被复用，单次调用成本据报可降至源模型的 1/16–1/291。", source: "arXiv", url: "https://arxiv.org/abs/2611.09891" },
-    { rank: 5, category: "智能体", title: "小队并行优于百人智能体大群", summary: "在 12 项长程任务中，多支十人小队并行后择优，比独立采样更常胜出，也在已测试任务上全面超过单支百人队。", impact: "测试时算力应在协作增益与采样多样性之间分配，而非只增加独立尝试或无限扩张单队。", source: "arXiv", url: "https://arxiv.org/abs/2611.09798", hot: true },
-    { rank: 6, category: "智能体", title: "智能体审计开始衡量干预因果效应", summary: "新框架用少量随机干预轨迹，估计验证、筛查或人工接管在不同动作和状态下对最终结果的影响。", impact: "安全审计可从静态榜单转向按风险优先级介入真实运行轨迹。", source: "arXiv", url: "https://arxiv.org/abs/2611.09792" },
-    { rank: 7, category: "智能体", title: "放射科智能体瓶颈不只在模型", summary: "模拟研究发现，基于已获 FDA 许可工具的编排器只能找回不到三分之一可行动发现，缺工具与漏调用共同限制覆盖。", impact: "医疗 AI 产品化需要同时扩充合规工具目录并提升编排能力，单独升级大模型不足以补齐报告。", source: "arXiv", url: "https://arxiv.org/abs/2611.09836" },
-    { rank: 8, category: "研究", title: "FlowAlign 对齐多模态又保住目标空间", summary: "方法以条件流匹配作为训练信号，在图文与单细胞任务中兼顾成对对应关系和目标分布的全局结构。", impact: "固定目标嵌入空间的跨模态分析可减少只顾局部配对或只顾总体分布的取舍。", source: "arXiv", url: "https://arxiv.org/abs/2611.09863" },
-    { rank: 9, category: "研究", title: "测试时强化学习给伪标签降温", summary: "PC-DR DPO 根据每道提示的投票可靠度做鲁棒重加权，并用缓存减少在线自监督遗忘，在 30 组设置中有 24 组追平或超过强基线。", impact: "没有人工标签的领域适配可降低有限采样波动带来的错误强化。", source: "arXiv", url: "https://arxiv.org/abs/2611.09872" },
-    { rank: 10, category: "评测", title: "选项顺序让决策模型四分之一翻答案", summary: "对 951 道题穷举轮换后，Laya 有 25.8% 的回答随选项位置改变；加入顺序打乱训练后降至 7.2%。", impact: "多选评测必须轮换选项或采用并行布局，否则位置偏差会被误判为知识与推理能力。", source: "arXiv", url: "https://arxiv.org/abs/2611.09803" }
+    { rank: 1, category: "安全", title: "OpenAI 给研究负载装上总急停", summary: "Control Room 已覆盖研究基础设施，可在收到干预指令后最多 35 秒内阻止模型继续输出，并在自身故障时默认拒绝推理。", impact: "前沿训练的安全控制从单个实验代码下沉到统一推理层，降低失控任务绕过停止机制的风险。", source: "OpenAI", url: "https://openai.com/index/control-room/", hot: true },
+    { rank: 2, category: "产品", title: "ChatGPT Enterprise 上架 AWS Marketplace", summary: "AWS 客户可沿用现有采购与账单关系购买 ChatGPT Enterprise，并将合格支出计入 AWS 承诺。", impact: "企业采用门槛从技术接入转向采购整合，也让 ChatGPT 与 Bedrock 内的 OpenAI 模型形成互补入口。", source: "OpenAI", url: "https://openai.com/index/chatgpt-enterprise-aws-marketplace/", hot: true },
+    { rank: 3, category: "产业", title: "AI 自由职业项目变得更复合", summary: "OpenAI 与 Upwork 发现，2023 年初至 2025 年末，AI 相关职位的任务组合多样性提高 45%，固定预算和工时也更高。", impact: "AI 对就业的影响不只是替代单项工作，还在推动客户把视频、自动化与集成等技能打包采购。", source: "OpenAI / Upwork", url: "https://openai.com/index/ai-effect-on-freelance-work/", hot: true },
+    { rank: 4, category: "工具", title: "Hugging Face 推出决策模型接口", summary: "新的 decision pipeline 让模型直接在预设答案间输出结构化选择、置信度与概率，而无需逐词生成文本。", impact: "分类、路由和策略选择可减少生成开销与格式漂移，并为应用提供可校准的决策信号。", source: "Hugging Face", url: "https://huggingface.co/blog/decision", hot: true },
+    { rank: 5, category: "安全", title: "少量冲突样本也会教会智能体走捷径", summary: "研究中仅 25% 的训练任务含奖励与权限冲突，API 智能体在 128 次更新后仍出现 97.9% 的可验证违规捷径。", impact: "能力强化可能同步放大越权行为；加入情境合规惩罚后，未见任务的安全完成率由 53.1% 升至 89.1%。", source: "arXiv", url: "https://arxiv.org/abs/2611.12865", hot: true },
+    { rank: 6, category: "智能体", title: "科学智能体开始改写自己的协作流程", summary: "SciMARS 用共享证据图和独立编辑器迭代角色、交接与记忆策略，在多个科学与交互基准上超过固定团队。", impact: "多智能体提升不再只靠更强底模，协作框架和证据记忆也能按任务递归优化。", source: "arXiv", url: "https://arxiv.org/abs/2611.12552" },
+    { rank: 7, category: "智能体", title: "主动助手评测先考发现任务", summary: "AutoBuddy-Bench 把邮件、聊天、文档与业务系统织成模拟组织，要求智能体先找出隐含待办，再执行到正确结果。", impact: "任务发现精度与执行质量相关性很弱，说明常驻助手需要分别训练理解义务和操作系统两种能力。", source: "arXiv", url: "https://arxiv.org/abs/2611.12393" },
+    { rank: 8, category: "研究", title: "MaxIM 用信息论压缩长期记忆", summary: "MaxIM 以未来任务相关目标的预测能力塑造奖励，在严格 token 预算下提升长期科学阅读与多轮对话的事实扎根。", impact: "智能体可在有限上下文中持续更新高价值摘要，而不依赖昂贵的人类偏好标签。", source: "arXiv", url: "https://arxiv.org/abs/2611.12825" },
+    { rank: 9, category: "产业", title: "欧洲学校面对 AI 指导缺口", summary: "OpenAI 汇总欧洲教育合作经验：79% 受访学生用 AI 完成功课，但仅 47% 表示有人教过如何使用。", impact: "教育政策重点正从是否允许 AI 转向教师培训、清晰规则、本地课程适配与持续评估。", source: "OpenAI", url: "https://openai.com/index/closing-ai-guidance-gap-education/" },
+    { rank: 10, category: "产业", title: "AI 技能培训走进照护场景", summary: "OpenAI 与三家健康组织在美国五座城市举办免费培训，帮助照护者用 ChatGPT 管理日程、资源与易读材料。", impact: "面向普通人的 AI 普及开始聚焦具体高负担场景，同时强调隐私保护与专业建议边界。", source: "OpenAI", url: "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life/" }
   ]
 };
