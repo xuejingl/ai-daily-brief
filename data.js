@@ -1,31 +1,31 @@
 window.BRIEF = {
-  date: "2026-11-15",
-  vibe: "今日 AI 的主线从‘更大模型’转向‘更可靠系统’：评测真实意图、压缩代理成本、约束工具写入，并重算算力基础设施的时间价值。",
+  date: "2026-11-16",
+  vibe: "今日 AI 的焦点从单点能力转向系统约束：芯片访问规则收紧，智能体开始学习自己的运行脚手架，推理服务则把尾延迟当成核心指标。",
   metrics: [
-    { label: "精选动态", value: "10", detail: "官方与论文原文核验" },
-    { label: "XYBench", value: "8,115", detail: "真实与合成误区问题" },
-    { label: "AgentSSL", value: "+21.8%", detail: "最高超越人工基线" },
-    { label: "攻击拦截", value: "13,935", detail: "CapLite 测试回合" }
+    { label: "精选动态", value: "10", detail: "官方公告与论文原文" },
+    { label: "推理吞吐", value: "2.4–4.4×", detail: "尾延迟调度提升 SLO goodput" },
+    { label: "数学推理", value: "+5.51", detail: "ARCHER 宏平均百分点" },
+    { label: "导航数据", value: "1,000", detail: "VLAN 多用户场景" }
   ],
   categories: [
-    { label: "评测", value: 1 },
-    { label: "工具", value: 3 },
+    { label: "政策", value: 2 },
+    { label: "工具", value: 1 },
     { label: "智能体", value: 2 },
-    { label: "研究", value: 1 },
     { label: "安全", value: 1 },
-    { label: "治理", value: 1 },
-    { label: "产业", value: 1 }
+    { label: "研究", value: 2 },
+    { label: "基础设施", value: 1 },
+    { label: "机器人", value: 1 }
   ],
   stories: [
-    { rank: 1, category: "评测", title: "XYBench 检查 AI 是否帮错了忙", summary: "AI2 发布含 8,115 个问题的 XYBench，测试助手能否识别用户方案背后的误区并转向真实目标。", impact: "五个前沿模型在 Stack Overflow 子集仅有 35%–41% 的回答主要聚焦真实目标，显示‘会判断’不等于‘会纠偏’。", source: "AI2 / Hugging Face", url: "https://huggingface.co/blog/allenai/xybench", hot: true },
-    { rank: 2, category: "工具", title: "SimReady 把机器人资产做成可验证积木", summary: "NVIDIA 展示如何用带碰撞、质量与关节属性的 OpenUSD 资产，在 Isaac Sim 中组装机械臂抓取任务。", impact: "标准化资产与配置验证能减少仿真场景的重复工程，但固定位置和脚本轨迹仍不能代表真机鲁棒性。", source: "NVIDIA / Hugging Face", url: "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place", hot: true },
-    { rank: 3, category: "工具", title: "llama.cpp 1.0 稳定本地推理接口", summary: "ggml-org 发布 llama.cpp 与 ggml v1.0.0，以语义化版本明确公共 C API 和 ABI 的兼容边界。", impact: "覆盖逾 150 种架构的本地 AI 生态获得更清晰的升级契约，应用集成与长期维护成本有望下降。", source: "ggml-org / Hugging Face", url: "https://huggingface.co/blog/ggml-org/llama-cpp-v1", hot: true },
-    { rank: 4, category: "智能体", title: "AgentSSL 用未标注数据自动拼训练方案", summary: "AgentSSL 把半监督学习视为程序搜索，让机器学习智能体在标签稀缺时组合并改写既有方法。", impact: "它在 12 种设置中的 8 种超过最强人工基线、最高提升 21.8%，但错误的程序选择可让性能下滑 47%。", source: "arXiv", url: "https://arxiv.org/abs/2611.17323", hot: true },
-    { rank: 5, category: "智能体", title: "CoReMem 给代码记忆算清成本", summary: "CoReMem 用后续任务的实测价值筛选仓库位置与可执行检查，让编码智能体只保留真正有用的记忆。", impact: "在 ChainSWE 上，27B 智能体解决率从 21.0% 升至 25.7%，步骤减少 17%，缓存感知总 token 减少 11%。", source: "arXiv", url: "https://arxiv.org/abs/2611.17316", hot: true },
-    { rank: 6, category: "研究", title: "经典能量模型千倍提速推理训练", summary: "CRAM 以可学习能量下降解决数独和迷宫，并用难度自适应计算替代反复循环的神经网络。", impact: "单 GPU 训练仅需 42–132 毫秒，至少快 1,000 倍且推理 FLOPs 少 282 倍，也提醒业界别用过易谜题夸大推理扩展性。", source: "arXiv", url: "https://arxiv.org/abs/2611.17309", hot: true },
-    { rank: 7, category: "工具", title: "Ballad 动态路由不同档位模型", summary: "Ballad 用在线多臂老虎机在启发式搜索过程中动态挑选前沿、免费或开放权重模型。", impact: "它在五类 NP 难题上匹配或超过最佳单模型，并较始终调用最强模型最多节省 65.6% API 成本。", source: "arXiv", url: "https://arxiv.org/abs/2611.17241" },
-    { rank: 8, category: "安全", title: "CapLite 不让小模型自写安全规则", summary: "CapLite 直接从工具 schema 推导权限，并要求影响写入对象的参数必须由用户明确给出。", impact: "在 13,935 个受攻击的 AgentDojo 回合中无一次攻击成功，且每回合 token 仅为 CaMeL 的 18%。", source: "arXiv", url: "https://arxiv.org/abs/2611.17115" },
-    { rank: 9, category: "治理", title: "自主 AI 需要可编程制度", summary: "研究提出互惠、问责、分工、认知多元、纠错、人类方向与制度适应七项多智能体治理原则。", impact: "随着智能体形成持续群体，可靠性不再只是单模型对齐问题，交互规则本身也需要可观察、可实验和可追责。", source: "arXiv", url: "https://arxiv.org/abs/2611.17114" },
-    { rank: 10, category: "产业", title: "AI 数据中心开始给通电速度定价", summary: "美国大陆技术经济分析把并网、燃气与光储方案的建设时间折算为错失算力成本。", impact: "计入部署速度后，直流耦合微电网在 85% 地点成为最低成本方案，说明‘何时通电’可能比每度电价格更关键。", source: "arXiv", url: "https://arxiv.org/abs/2611.17098" }
+    { rank: 1, category: "政策", title: "美国把远程调用纳入先进芯片管制", summary: "美国商务部 BIS 发布临时最终规则，针对经第三国数据中心远程使用先进 AI 芯片与服务器的规避路径。", impact: "出口管制正从硬件跨境延伸到算力访问方式，云服务商与全球 AI 基础设施的合规边界将更复杂。", source: "美国商务部 BIS", url: "https://media.bis.gov/sites/default/files/documents/BIS%20Issues%20Rule%20Addressing%20Remote%20Access%20to%20American%20Super%20Intelligence%20Technology.pdf", hot: true },
+    { rank: 2, category: "工具", title: "E4S 26.11 扩充 AI 与 HPC 软件栈", summary: "Extreme-scale Scientific Software Stack 发布 26.11 版，集合逾 125 个 HPC 与 AI 软件包，并加入多款智能体工具与更新后的 GPU 运行时。", impact: "科研团队可在统一、可复现的软件栈中组合本地模型、编程智能体与加速库，降低异构集群部署成本。", source: "E4S", url: "https://e4s.io/news/NEWS_RELEASE_E4S_26.11.pdf", hot: true },
+    { rank: 3, category: "智能体", title: "智能体开始学习自己的运行脚手架", summary: "ModHarness-RL 把上下文压缩与行为引导写成可学习程序，并随强化学习训练从轨迹中持续演化。", impact: "在代码搜索、ALFWorld 与 BIRD SQL 多数设置中优于固定脚手架，说明系统层策略也应和模型共同训练。", source: "arXiv", url: "https://arxiv.org/abs/2611.18533", hot: true },
+    { rank: 4, category: "智能体", title: "单人示范也能启动多智能体协作", summary: "IBMARL 让示范策略与强化学习策略共同提出动作，再由集中式评论器为协作团队选择组合。", impact: "四项基准中，它在两项上快 2.6–4.2 倍超越示范策略，并在另外两项成为唯一完成超越的方法。", source: "arXiv", url: "https://arxiv.org/abs/2611.18543", hot: true },
+    { rank: 5, category: "安全", title: "网页智能体的幻觉可预测却难解释", summary: "研究用线性探针在生成前预测网页元素幻觉，AUC 达 0.80，并通过方向干预修正 85% 的错误动作。", impact: "轻微提示格式变化就会削弱干预效果，表明现有机械可解释性工具距离稳定诊断真实智能体故障仍有差距。", source: "arXiv", url: "https://arxiv.org/abs/2611.18514", hot: true },
+    { rank: 6, category: "研究", title: "ARCHER 让小模型输出可执行推理", summary: "ARCHER 把自由文本思维链编译成含计算器调用、运行观察与验证动作的类型化轨迹，再用分层强化学习优化。", impact: "在五个 10B 以下模型上较最强工具基线宏平均提升 5.51 个百分点，为本地低成本数学推理提供可审计路径。", source: "arXiv", url: "https://arxiv.org/abs/2611.18494", hot: true },
+    { rank: 7, category: "基础设施", title: "推理调度开始专治解码抖动", summary: "新调度器按迭代延迟尾部分布校准每步预填充预算，并在分离式服务中控制新请求进入节奏。", impact: "其 SLO goodput 在多种模型上提高 2.4–4.4 倍以上，说明 P99 令牌间隔比平均吞吐更决定交互体验。", source: "arXiv", url: "https://arxiv.org/abs/2611.18392" },
+    { rank: 8, category: "机器人", title: "VLAN 用不同身体重做导航评测", summary: "VLAN 提供 1,000 个场景、2 万条轨迹和 16 万关键帧，分别标注轮式、足式及残障用户的可达性。", impact: "现有视觉语言模型难以随用户身体条件稳定调整风险判断，机器人导航需要超越统一‘可通行’标签。", source: "arXiv", url: "https://arxiv.org/abs/2611.18346" },
+    { rank: 9, category: "研究", title: "腕部肌电把连续打字实时解码", summary: "因果状态空间模型融合肌电与自回归语言模型，在无未来信息下连续预测按键、退格与换行。", impact: "它以少 6.7 倍参数取得 25.13% 字符错误率、较前最佳相对提升 5.4%，推进无键盘输入走向实时。", source: "arXiv", url: "https://arxiv.org/abs/2611.18464" },
+    { rank: 10, category: "政策", title: "美联储把 AI 风险带入金融稳定讨论", summary: "美联储理事 Michael Barr 在 AI 金融会议上讨论人工智能对市场与金融稳定的潜在影响。", impact: "这虽非新监管，却显示政策关注正从单机构模型风险扩展到市场集中、共同依赖与系统性传导。", source: "美国联邦储备委员会", url: "https://www.federalreserve.gov/newsevents/speech/files/barr20261116a.pdf" }
   ]
 };
