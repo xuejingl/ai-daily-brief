@@ -1,31 +1,30 @@
 window.BRIEF = {
-  date: "2026-11-16",
-  vibe: "今日 AI 的焦点从单点能力转向系统约束：芯片访问规则收紧，智能体开始学习自己的运行脚手架，推理服务则把尾延迟当成核心指标。",
+  date: "2026-11-17",
+  vibe: "今日 AI 的主线从模型分数转向系统可信度：开放模型路由加速落地，而基准污染、科学判断与智能体安全正在重写评测标准。",
   metrics: [
     { label: "精选动态", value: "10", detail: "官方公告与论文原文" },
-    { label: "推理吞吐", value: "2.4–4.4×", detail: "尾延迟调度提升 SLO goodput" },
-    { label: "数学推理", value: "+5.51", detail: "ARCHER 宏平均百分点" },
-    { label: "导航数据", value: "1,000", detail: "VLAN 多用户场景" }
+    { label: "开放模型份额", value: "71.7%", detail: "OpenRouter 9 月末令牌占比" },
+    { label: "基准泄漏", value: "96%", detail: "某基础模型 HumanEval 泄漏率" },
+    { label: "医疗评测", value: "17.5–49.1", detail: "InclusionMed 百分制区间" }
   ],
   categories: [
-    { label: "政策", value: 2 },
+    { label: "行业", value: 1 },
+    { label: "安全", value: 3 },
+    { label: "研究", value: 3 },
     { label: "工具", value: 1 },
-    { label: "智能体", value: 2 },
-    { label: "安全", value: 1 },
-    { label: "研究", value: 2 },
-    { label: "基础设施", value: 1 },
-    { label: "机器人", value: 1 }
+    { label: "治理", value: 1 },
+    { label: "教育", value: 1 }
   ],
   stories: [
-    { rank: 1, category: "政策", title: "美国把远程调用纳入先进芯片管制", summary: "美国商务部 BIS 发布临时最终规则，针对经第三国数据中心远程使用先进 AI 芯片与服务器的规避路径。", impact: "出口管制正从硬件跨境延伸到算力访问方式，云服务商与全球 AI 基础设施的合规边界将更复杂。", source: "美国商务部 BIS", url: "https://media.bis.gov/sites/default/files/documents/BIS%20Issues%20Rule%20Addressing%20Remote%20Access%20to%20American%20Super%20Intelligence%20Technology.pdf", hot: true },
-    { rank: 2, category: "工具", title: "E4S 26.11 扩充 AI 与 HPC 软件栈", summary: "Extreme-scale Scientific Software Stack 发布 26.11 版，集合逾 125 个 HPC 与 AI 软件包，并加入多款智能体工具与更新后的 GPU 运行时。", impact: "科研团队可在统一、可复现的软件栈中组合本地模型、编程智能体与加速库，降低异构集群部署成本。", source: "E4S", url: "https://e4s.io/news/NEWS_RELEASE_E4S_26.11.pdf", hot: true },
-    { rank: 3, category: "智能体", title: "智能体开始学习自己的运行脚手架", summary: "ModHarness-RL 把上下文压缩与行为引导写成可学习程序，并随强化学习训练从轨迹中持续演化。", impact: "在代码搜索、ALFWorld 与 BIRD SQL 多数设置中优于固定脚手架，说明系统层策略也应和模型共同训练。", source: "arXiv", url: "https://arxiv.org/abs/2611.18533", hot: true },
-    { rank: 4, category: "智能体", title: "单人示范也能启动多智能体协作", summary: "IBMARL 让示范策略与强化学习策略共同提出动作，再由集中式评论器为协作团队选择组合。", impact: "四项基准中，它在两项上快 2.6–4.2 倍超越示范策略，并在另外两项成为唯一完成超越的方法。", source: "arXiv", url: "https://arxiv.org/abs/2611.18543", hot: true },
-    { rank: 5, category: "安全", title: "网页智能体的幻觉可预测却难解释", summary: "研究用线性探针在生成前预测网页元素幻觉，AUC 达 0.80，并通过方向干预修正 85% 的错误动作。", impact: "轻微提示格式变化就会削弱干预效果，表明现有机械可解释性工具距离稳定诊断真实智能体故障仍有差距。", source: "arXiv", url: "https://arxiv.org/abs/2611.18514", hot: true },
-    { rank: 6, category: "研究", title: "ARCHER 让小模型输出可执行推理", summary: "ARCHER 把自由文本思维链编译成含计算器调用、运行观察与验证动作的类型化轨迹，再用分层强化学习优化。", impact: "在五个 10B 以下模型上较最强工具基线宏平均提升 5.51 个百分点，为本地低成本数学推理提供可审计路径。", source: "arXiv", url: "https://arxiv.org/abs/2611.18494", hot: true },
-    { rank: 7, category: "基础设施", title: "推理调度开始专治解码抖动", summary: "新调度器按迭代延迟尾部分布校准每步预填充预算，并在分离式服务中控制新请求进入节奏。", impact: "其 SLO goodput 在多种模型上提高 2.4–4.4 倍以上，说明 P99 令牌间隔比平均吞吐更决定交互体验。", source: "arXiv", url: "https://arxiv.org/abs/2611.18392" },
-    { rank: 8, category: "机器人", title: "VLAN 用不同身体重做导航评测", summary: "VLAN 提供 1,000 个场景、2 万条轨迹和 16 万关键帧，分别标注轮式、足式及残障用户的可达性。", impact: "现有视觉语言模型难以随用户身体条件稳定调整风险判断，机器人导航需要超越统一‘可通行’标签。", source: "arXiv", url: "https://arxiv.org/abs/2611.18346" },
-    { rank: 9, category: "研究", title: "腕部肌电把连续打字实时解码", summary: "因果状态空间模型融合肌电与自回归语言模型，在无未来信息下连续预测按键、退格与换行。", impact: "它以少 6.7 倍参数取得 25.13% 字符错误率、较前最佳相对提升 5.4%，推进无键盘输入走向实时。", source: "arXiv", url: "https://arxiv.org/abs/2611.18464" },
-    { rank: 10, category: "政策", title: "美联储把 AI 风险带入金融稳定讨论", summary: "美联储理事 Michael Barr 在 AI 金融会议上讨论人工智能对市场与金融稳定的潜在影响。", impact: "这虽非新监管，却显示政策关注正从单机构模型风险扩展到市场集中、共同依赖与系统性传导。", source: "美国联邦储备委员会", url: "https://www.federalreserve.gov/newsevents/speech/files/barr20261116a.pdf" }
+    { rank: 1, category: "行业", title: "Hugging Face 推理切换至 OpenRouter", summary: "Hugging Face 将语言模型 Inference Providers 路由迁至 OpenRouter，可在 80 多家提供商间按价格、速度与可靠性自动选择并失败重试。", impact: "开放权重模型已占 OpenRouter 9 月末令牌量的 71.7%，统一令牌与兼容 API 将进一步降低多模型部署门槛。", source: "Hugging Face", url: "https://huggingface.co/blog/openrouter", hot: true },
+    { rank: 2, category: "安全", title: "Benchleaking 污染已下沉到基础模型", summary: "研究发现部分公开基础模型可续写训练中未给出的完整测试题与答案，其中 ERNIE-5.5-Flash-Base 的 HumanEval 泄漏率达 96%。", impact: "论文提出 Anti-Hack 分数后，受污染最重模型平均少 16.6 分，说明排行榜需要强制披露去污染流程与校正成绩。", source: "arXiv", url: "https://arxiv.org/abs/2611.21315", hot: true },
+    { rank: 3, category: "研究", title: "科学智能体会对错误模拟器过度自信", summary: "SciResearch-Eval 让智能体自主设计热传导实验；多数模型遇到缺失物理机制的模拟器时，95% 区间实际仅覆盖真值 20%–62%。", impact: "更宽区间并不能修复判断，评测应把实验设计、模型失配诊断与不确定性校准纳入自主科研智能体的核心指标。", source: "arXiv", url: "https://arxiv.org/abs/2611.21541", hot: true },
+    { rank: 4, category: "安全", title: "文本相似度守不住智能体注入传播", summary: "三智能体邮件中继实验里，相似度分类器漏掉 19 个有效注入中的 8 个，同时误报 192 条正常回复中的 70 条。", impact: "提示注入防线不能只看措辞重合，必须转向行为结果与授权策略约束的联合评估。", source: "arXiv", url: "https://arxiv.org/abs/2611.21520", hot: true },
+    { rank: 5, category: "工具", title: "小模型成败高度取决于智能体脚手架", summary: "研究在 0.75B 至 4.7B 模型上比较五套本地脚手架，Mingbird 在每个尺寸都取得最高平均分，关键优势是推动任务真正产出文件。", impact: "模型榜单若固定单一脚手架会低估系统设计影响，部署评测还应检查产物而非仅凭退出码判定成功。", source: "arXiv", url: "https://arxiv.org/abs/2611.21407", hot: true },
+    { rank: 6, category: "治理", title: "拒绝理由正确，不等于申诉建议有效", summary: "新研究提出“补救有效性”：在多条规则同时拒绝请求时，只解释一个真实理由，用户修正后通常仍无法改变决定。", impact: "福利资格与访问控制等高风险场景应从决策函数生成完整解释，并以行动后能否改变结果来审计，而非只核对理由真假。", source: "arXiv", url: "https://arxiv.org/abs/2611.21545" },
+    { rank: 7, category: "教育", title: "“防 AI”大学试题仍被模型拿下八成", summary: "研究收集 17 个学科的 75 道真实大学题，其中 61 道由教师刻意设计为难以用 LLM 解答，最佳模型仍取得约 83%–85%。", impact: "靠改写题目难以守住学术诚信，课程评价需要更多现场过程、口试与可追溯推理证据。", source: "arXiv", url: "https://arxiv.org/abs/2611.21476" },
+    { rank: 8, category: "安全", title: "真实碎片也能诱导智能体制造谣言", summary: "Generative Montage 用真实社媒片段拼接误导叙事，14 个模型中有 12 个对谣言的接受率超过 65%，多数投票后仍常失守。", impact: "原型监控器核查结论的直接证据后提升 5.6–29.0 个百分点，说明智能体需要验证推断关系而不只是来源真伪。", source: "arXiv", url: "https://arxiv.org/abs/2611.21235" },
+    { rank: 9, category: "研究", title: "InclusionMed 重做包容性医疗 AI 评测", summary: "InclusionMed 从 388 个候选基准中审计并复现四个公开基准，再加入私有诊断任务，前沿模型综合得分仅为 17.5–49.1/100。", impact: "模型排名会随医疗角色和能力维度变化，医院选型应按具体诊疗与沟通场景评估，而非依赖单一总榜。", source: "arXiv", url: "https://arxiv.org/abs/2611.21218" },
+    { rank: 10, category: "研究", title: "多智能体推理寻找“信念平衡点”", summary: "Stream of Belief 让多个智能体维持连续潜在信念，并通过交流与反思迭代，直到新增沟通不再带来有效信息。", impact: "这一框架把多智能体扩展目标从增加轮次改为寻找稳定集体状态，为控制冗余通信提供新方向。", source: "arXiv", url: "https://arxiv.org/abs/2611.21250" }
   ]
 };
