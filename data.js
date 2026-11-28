@@ -1,11 +1,11 @@
 window.BRIEF = {
-  date: "2026-11-27",
-  vibe: "今日 AI 主线从专用芯片上的高效生成，扩展到机器人自主执行、科研智能体与金融系统风险治理。",
+  date: "2026-11-28",
+  vibe: "周末 AI 主线落在专用芯片加速、多智能体训练与具身系统实测，同时金融与出口治理继续收紧。",
   metrics: [
     { label: "精选动态", value: "10", detail: "官方发布与论文原文" },
     { label: "视频生成", value: "22–23秒", detail: "10 秒带声画面" },
-    { label: "机器人实测", value: "9/10", detail: "实体机械臂叠块" },
-    { label: "AI 债券发行", value: "$3050亿+", detail: "2026 超大规模云厂商" }
+    { label: "文档推理", value: "7.62×", detail: "H200 单并发加速" },
+    { label: "自动驾驶", value: "76.5%", detail: "遮挡行人无碰撞率" }
   ],
   categories: [
     { label: "产业", value: 2 },
@@ -23,7 +23,7 @@ window.BRIEF = {
     { rank: 6, category: "研究", title: "REE 用百道开放题考科研智能体", summary: "REE 覆盖 5 大科学领域、23 个学科，让智能体在 12 小时内迭代改进真实研究起始方案。", impact: "Claude Opus 5.5 与 GPT-6.1 Sol 分别在 86% 和 81% 的任务上超过专家方案，为自主科研提供统一过程评测。", source: "arXiv", url: "https://arxiv.org/abs/2611.34646", hot: true },
     { rank: 7, category: "工具", title: "多智能体协作进入可训练阶段", summary: "Hugging Face 用四个共享模型的智能体和可验证任务，演示如何训练沟通协议并评估群体表现。", impact: "多智能体增益不再只依赖提示工程，而可作为独立能力接受强化训练、归因和复现实验。", source: "Hugging Face", url: "https://huggingface.co/blog/training-swarms" },
     { rank: 8, category: "芯片", title: "llama.cpp 上线 AMD 推理基准看板", summary: "公开看板持续追踪 Ryzen 与 Radeon 上不同模型、量化和 llama.cpp 构建的提示处理及生成吞吐。", impact: "开发者可用公开工作流和原始数据定位本地推理回归，更透明地比较 AMD 硬件与软件优化。", source: "Hugging Face / ggml", url: "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench" },
-    { rank: 9, category: "研究", title: "TASK Memory 抑制‘记得却答错’", summary: "TASK 把文本记忆、激活引导与知识编辑绑定到同一地址，将十组模型数据中的忽略记忆错误压到最高 1.5%。", impact: "外部记忆系统可从只优化检索，转向控制模型何时采用、如何应用已取回事实。", source: "arXiv", url: "https://arxiv.org/abs/2611.34762" },
+    { rank: 9, category: "研究", title: "失败数据飞轮补强自动驾驶 VLA", summary: "研究团队按失败地图迭代生成训练场景，五轮后将 ReCogDrive 遮挡行人测试的无碰撞率从 39.0% 提至 76.5%。", impact: "没有大规模实车车队的团队，也可能用定向合成数据和闭环评测补齐具身模型的长尾行为。", source: "arXiv", url: "https://arxiv.org/abs/2611.34698" },
     { rank: 10, category: "政策", title: "美国启动 AI 出口按需联盟通道", summary: "美国商务部在 American SI Exports Program 下设立 On-Demand Consortia，为具体海外项目组织企业联合申报。", impact: "11 月 30 日起滚动收件的机制，把 AI 全栈出口从单项许可推进到政府协调的项目级产业联盟。", source: "U.S. Department of Commerce", url: "https://public-inspection.federalregister.gov/2026-24107.pdf" }
   ]
 };
